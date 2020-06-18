@@ -17,6 +17,7 @@ export default (state, action) => {
         ...state,
         autenticado: true,
         mensaje: null,
+        cargando: false,
       };
 
     //REGISTRO Y LOGIN ERROR COMPARTEN LOGICA
@@ -29,6 +30,7 @@ export default (state, action) => {
         token: null,
         autenticado: null,
         usuario: null,
+        cargando: false,
         mensaje: action.payload,
       };
 
@@ -38,6 +40,7 @@ export default (state, action) => {
         ...state,
         autenticado: true,
         usuario: action.payload,
+        cargando: false,
       };
 
     default:
