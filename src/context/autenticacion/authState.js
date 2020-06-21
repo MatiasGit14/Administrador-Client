@@ -80,7 +80,7 @@ const AuthState = (props) => {
       //Obtener un usuario una vez que se logueo exitosamente
       usuarioAutenticado();
     } catch (error) {
-      console.log(error.response.data.msg);
+      console.log(error);
       const alerta = {
         msg: error.response.data.msg,
         categoria: "alerta-error",
