@@ -20,6 +20,7 @@ const Login = (props) => {
     if (mensaje) {
       mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
+    //eslint-disable-next-line
   }, [mensaje, autenticado, props.history]);
 
   //State para el usuario que ya esa registrado

@@ -7,8 +7,6 @@ import AuthContext from "../../context/autenticacion/authContext";
 //el componente interno /Proyectos, de esta manera escribiendo en la URL /Proyectos no se va a poder acceder sin estar autenticado
 //(component: Component)
 const RutaPrivada = ({ component: Component, ...props }) => {
-  console.log(props);
-
   //Extraer la informacion de autenticacion
   const authContext = useContext(AuthContext);
   const { autenticado, cargando, usuarioAutenticado } = authContext;
@@ -18,6 +16,7 @@ const RutaPrivada = ({ component: Component, ...props }) => {
   //evitar que se vea la pagina de inicio un milisegundo cuando se recarga el componente de proyectos estando autenticado
   useEffect(() => {
     usuarioAutenticado();
+    //eslint-disable-next-line
   }, []);
   return (
     <Route

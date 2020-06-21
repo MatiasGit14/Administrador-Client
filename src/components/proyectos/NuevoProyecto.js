@@ -12,7 +12,7 @@ const NuevoProyecto = () => {
     agregarProyecto, // funcion para agregar nuevos proyectos
     mostrarError, // funcion que muestra el error de mandar un formulario vacio
   } = proyectosContext;
-  //state del proyecto
+  //state del nuevo proyecto
   const [proyecto, guardarProyecto] = useState({
     nombre: "",
   });
@@ -38,7 +38,7 @@ const NuevoProyecto = () => {
     }
     // Guardar en el state del objeto proyecto ahora con el ID que trae del context
     agregarProyecto(proyecto);
-    //Reiniciar el Form porque el parametro value del input es el {name} del objeto
+    //Reiniciar el Form porque el parametro value del input es el {nombre} del objeto
     guardarProyecto({
       name: "",
     });
